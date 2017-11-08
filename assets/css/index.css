@@ -1,0 +1,209 @@
+@charset "UTF-8";
+/*.ant-btn:focus, .ant-btn:hover,.ant-input:focus, .ant-input:hover {
+    background-color: #fff;
+    border-color: #bf1616;
+    box-shadow: 0 0 0 2px rgba(191, 22, 22, 0.1);
+}*/
+.lt-full {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0; }
+
+.zmiti-text-overflow {
+  overflow: hidden;
+  white-space: nowrap;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  -webkit-text-overflow: ellipsis; }
+
+html, body, div, p, ul, li, ol, dl, dt, dd, header, footer, video, h1, h2, h3, h4, canvas, section, figure {
+  padding: 0;
+  margin: 0; }
+
+a {
+  text-decoration: none; }
+
+li {
+  list-style: none; }
+
+html, body {
+  height: 100%;
+  -webkit-tap-highlight-color: transparent; }
+
+body {
+  font-family: "Helvetica Neue", 'Helvetica', "Microsoft YaHei", '微软雅黑', arial, sans-serif;
+  overflow-x: hidden;
+  font-size: 14px; }
+
+img {
+  border: none;
+  vertical-align: middle;
+  width: 100%;
+  height: auto; }
+
+.clearfix {
+  clear: both; }
+
+input, textarea {
+  outline: none; }
+
+.zmiti-loading {
+  background: #8e101c;
+  color: #f2eb80;
+  z-index: 1100; }
+  .zmiti-loading .zmiti-loading-bar {
+    width: 7rem;
+    position: absolute;
+    top: 48%;
+    left: 1.5rem;
+    height: 4px;
+    border-radius: 2px;
+    border: 1px solid #f2eb80;
+    padding: 1px; }
+    .zmiti-loading .zmiti-loading-bar span {
+      position: absolute;
+      width: 0;
+      height: 4px;
+      background: #f2eb80;
+      border-radius: 1px; }
+    .zmiti-loading .zmiti-loading-bar label {
+      position: relative;
+      top: -20px;
+      left: 0; }
+      .zmiti-loading .zmiti-loading-bar label .dang {
+        width: 1rem;
+        display: block;
+        position: relative;
+        top: -.4rem; }
+
+#shineflip {
+  /*background: url("../images/cover.jpg") no-repeat;*/
+  background-size: 100% 100%;
+  position: absolute; }
+
+#shineflip-pages {
+  /*    background-color:#fafafa;*/
+  background-repeat: repeat;
+  position: absolute;
+  z-index: 2; }
+
+#shineflip-pages section.cover_front, #shineflip-pages section.cover_background {
+  position: absolute;
+  overflow: hidden;
+  color: #ffffff; }
+
+#shineflip-pages .cover_front_content {
+  position: absolute;
+  z-index: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none; }
+
+#shineflip-pages .cover_front_back {
+  position: absolute;
+  z-index: 0; }
+
+#shineflip-pages .cover_background_content {
+  position: absolute;
+  z-index: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none; }
+
+#shineflip-pages .cover_background_back {
+  position: absolute;
+  z-index: 0; }
+
+#shineflip-pages section.pageflip {
+  display: block;
+  position: absolute;
+  overflow: hidden; }
+
+#shineflip-pages section.page {
+  display: block;
+  position: absolute;
+  overflow: hidden; }
+
+#shineflip-pages-flipcontent, #shineflip-pages section > div {
+  display: block;
+  font-size: 12px;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100%; }
+
+#shineflip-pages-flipcontent, #shineflip-pages section > span {
+  display: block;
+  font-size: 12px;
+  position: absolute;
+  overflow: hidden; }
+
+#shineflip-pages-flipcontent p, #shineflip-pages-flipcontent h2, #shineflip-pages section p, #shineflip-pages section h2 {
+  line-height: 1.4em;
+  text-align: justify; }
+
+#shineflip-canvas {
+  position: absolute;
+  z-index: 0; }
+
+#shineflip-page-mid-canvas {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0; }
+
+.zmiti-main-ui {
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 201; }
+@-webkit-keyframes scale {
+  0% {
+    -webkit-transform: scale(0.97);
+    transform: scale(0.97); }
+  to {
+    -webkit-transform: scale(1.03);
+    transform: scale(1.03); } }
+  .zmiti-main-ui #flipbook > div:nth-of-type(1) {
+    background: red; }
+  .zmiti-main-ui #flipbook > div:nth-of-type(2) {
+    background: blue; }
+  .zmiti-main-ui #flipbook > div:nth-of-type(3) {
+    background: #f0f; }
+  .zmiti-main-ui #flipbook > div:nth-of-type(4) {
+    background: #0fa; }
+  .zmiti-main-ui #flipbook > div:nth-of-type(5) {
+    background: #0a0; }
+  .zmiti-main-ui #flipbook > div:nth-of-type(6) {
+    background: #c90; }
+  .zmiti-main-ui #flipbook > div:nth-of-type(7) {
+    background: #028; }
+  .zmiti-main-ui #flipbook > div:nth-of-type(7) {
+    background: #f82; }
+
+.zmiti-mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  left: 0;
+  top: 0;
+  z-index: 15800; }
+  .zmiti-mask.tip-bottom img {
+    position: absolute;
+    left: 0;
+    bottom: 0; }
+
+@media all and (min-height: 603px) and (min-width: 375px) {
+  .zmiti-main-ui .zmiti-index-page .zmiti-index-text {
+    bottom: 2.9rem; } }
+
+/*# sourceMappingURL=index.css.map */

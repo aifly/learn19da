@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"/>
+	<meta id="meta" name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no"/>
+	<meta name="format-detection" content="telephone=no,email=no" />
+	<link rel="stylesheet" type="text/css" href="./assets/css/index.css">
+	<script>
+		document.getElementsByTagName('html')[0].style.fontSize = document.documentElement.clientWidth / 10 + 'px'
+	</script>
+	<title>学习19大，你打卡了吗？</title>
+</head>
+<body>
+	<div class="lt-full zmiti-loading" style="display: none;" id="zmiti-loading">
+		<div class='zmiti-loading-bar'>
+			<span></span>
+			<label>
+				
+				<i>0%</i>
+			</label>
+		</div>
+	</div>
+	<div class="zmiti-main-ui" id="zmiti-main-ui">
+		<div id="flipbook" class="lt-full">
+			<div class=" lt-full"> page 1</div>
+			<div class=" lt-full">page 2</div>
+			<div class='lt-full'> Page 3 </div>
+			<div class='lt-full'> Page 4 </div>
+			<div class='lt-full'> Page 5 </div>
+			<div class='lt-full'> Page 6 </div>
+			<div class=" lt-full">page 7</div>
+			<div class=" lt-full">page 8</div>
+		</div>
+
+		
+	</div>
+
+	<script src='http://res.wx.qq.com/open/js/jweixin-1.2.0.js'></script> 
+	<script src="https://cdn.bootcss.com/vue/2.4.4/vue.js"></script>
+	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js"></script>
+	<script src='./assets/lib/turn.min.js'></script>
+	<script>
+		function loadScript(src){
+			 var script = document.createElement('script');
+			 script.src = src+'?t='+new Date().getTime()
+			 document.body.appendChild(script)
+		}
+
+		$("#flipbook").turn({
+			width: 320,
+			display:'single',
+			height: 568,
+			autoCenter: true
+		});
+
+		loadScript('./assets/js/index.js')
+
+
+	</script>
+
+</body>
+</html>

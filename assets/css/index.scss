@@ -1,0 +1,277 @@
+﻿@import './base.scss';
+
+html, body, div, p, ul, li, ol, dl, dt, dd, header, footer, video, h1, h2, h3, h4, canvas, section, figure {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+html, body {
+  height: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: "Helvetica Neue", 'Helvetica', "Microsoft YaHei", '微软雅黑', arial, sans-serif;
+  overflow-x: hidden;
+  font-size: 14px;
+}
+
+img {
+  border: none;
+  vertical-align: middle;
+  width: 100%;
+  height: auto;
+}
+
+.clearfix {
+  clear: both;
+}
+
+input, textarea {
+  outline: none;
+}
+
+$viewW: 10rem;
+
+.zmiti-loading {
+  background: #8e101c;
+  color: #f2eb80;
+  z-index: 1100;
+
+  .zmiti-loading-bar {
+    width: 7rem;
+    @include pos(a);
+    top: 48%;
+    left: 1.5rem;
+    height: 4px;
+    @include br(2px);
+    border: 1px solid #f2eb80;
+    padding: 1px;
+
+    span {
+      @include pos(a);
+      width: 0;
+      height: 4px;
+      background: #f2eb80;
+      @include br(1px);
+    }
+
+    label {
+      @include pos(r);
+      top: -20px;
+      left: 0;
+
+      .dang {
+        width: 1rem;
+        display: block;
+        @include pos(r);
+        top: -.4rem;
+      }
+
+    }
+
+  }
+
+}
+
+#shineflip {
+
+  /*background: url("../images/cover.jpg") no-repeat;*/
+  -o-background-size: 100% 100%;
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  background-size: 100% 100%;
+  position: absolute;
+}
+
+#shineflip-pages {
+
+  /*    background-color:#fafafa;*/
+  background-repeat: repeat;
+  position: absolute;
+  z-index: 2;
+}
+
+#shineflip-pages section.cover_front, #shineflip-pages section.cover_background {
+  position: absolute;
+  overflow: hidden;
+  color: #ffffff;
+}
+
+#shineflip-pages .cover_front_content {
+  position: absolute;
+  z-index: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
+
+#shineflip-pages .cover_front_back {
+  position: absolute;
+  z-index: 0;
+}
+
+#shineflip-pages .cover_background_content {
+  position: absolute;
+  z-index: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
+
+#shineflip-pages .cover_background_back {
+  position: absolute;
+  z-index: 0;
+}
+
+#shineflip-pages section.pageflip {
+  display: block;
+  position: absolute;
+  overflow: hidden;
+}
+
+#shineflip-pages section.page {
+  //background-color: #fafafa;
+  display: block;
+  position: absolute;
+  overflow: hidden;
+}
+
+#shineflip-pages-flipcontent, #shineflip-pages section>div {
+  display: block;
+  font-size: 12px;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+#shineflip-pages-flipcontent, #shineflip-pages section>span {
+  display: block;
+  font-size: 12px;
+  position: absolute;
+  overflow: hidden;
+}
+
+#shineflip-pages-flipcontent p, #shineflip-pages-flipcontent h2, #shineflip-pages section p, #shineflip-pages section h2 {
+  line-height: 1.4em;
+  text-align: justify;
+}
+
+#shineflip-canvas {
+  position: absolute;
+  z-index: 0;
+}
+
+#shineflip-page-mid-canvas {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.zmiti-main-ui {
+  height: 100%;
+  @include pos(f);
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 201;
+
+  @-webkit-keyframes scale {
+    0% {
+      -webkit-transform: scale(.97);
+      transform: scale(.97)
+    }
+
+    to {
+      -webkit-transform: scale(1.03);
+      transform: scale(1.03)
+    }
+
+  }
+
+  #flipbook {
+    &>div {
+      &:nth-of-type(1) {
+        background: red;
+      }
+
+      &:nth-of-type(2) {
+        background: blue
+      }
+
+      &:nth-of-type(3) {
+        background: #f0f;
+      }
+
+      &:nth-of-type(4) {
+        background: #0fa;
+      }
+
+      &:nth-of-type(5) {
+        background: #0a0;
+      }
+
+      &:nth-of-type(6) {
+        background: #c90
+      }
+
+      &:nth-of-type(7) {
+        background: #028
+      }
+
+      &:nth-of-type(7) {
+        background: #f82
+      }
+
+    }
+
+  }
+
+}
+
+.zmiti-mask {
+  @include pos(a);
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .7);
+  display: none;
+  left: 0;
+  top: 0;
+  z-index: 15800;
+
+  &.tip-bottom {
+    img {
+      @include pos(a);
+      left: 0;
+      bottom: 0;
+    }
+
+  }
+
+}
+
+@media all and (min-height:603px) and (min-width:375px) {
+  .zmiti-main-ui {
+    .zmiti-index-page {
+      .zmiti-index-text {
+        bottom: 2.9rem;
+      }
+
+    }
+
+  }
+
+}
